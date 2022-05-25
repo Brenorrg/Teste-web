@@ -1,0 +1,176 @@
+.shelf__main{
+    width: 100%;
+    padding: 0;
+    background: #fff;
+    max-width: 1170px;
+    margin: 0 auto;
+
+    @media (min-width: 1024px) and (max-width: 1170px){
+        max-width: 920px;
+    }
+    @media (min-width: 767px) and (max-width: 1023px){
+        max-width: 663px;
+    }
+    @media (min-width: 560px) and (max-width: 766px){
+        max-width: 560px;
+    }
+    @media (max-width: 559px){
+        max-width: 375px;
+    }
+
+    &-title{
+        margin-bottom: 34px;
+        color: #7F7F7F;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28.8px;
+        text-align: center;
+    }
+    &-items{
+        max-width: 100%;
+        overflow: hidden !important;
+                
+        &.bottom{
+            margin-top: 13px;
+        }
+        
+        & .slick-track{
+            min-width: 1170px;
+
+            @media (min-width: 1024px) and (max-width: 1170px){
+                min-width: 820px;
+            }
+            @media (min-width: 767px) and (max-width: 1023px){
+                min-width: 700px;
+            }
+            @media (min-width: 560px) and (max-width: 766px){
+                min-width: 560px;
+            }
+            @media (max-width: 559px){
+                min-width: 375px;
+            }
+        }
+        
+        & .shelf{
+            max-width: 279px;
+            margin: auto;
+            cursor: pointer;
+            
+            @media (max-width: 559px){
+                width: 279px;
+                height: 330px;
+            }
+            
+            &-image{
+                position: relative;
+                transition: all ease-in-out 0.3s;
+                
+                & img{
+                    width: 100%;
+                    height: auto;
+                }
+                &--flag{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 9px;
+                    background-color: #8158C5;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 12px;
+                    font-weight: normal;
+                    line-height: 14.4px;
+                    color: #fff;
+                    text-transform: uppercase;
+                }
+                &--fastBuy{
+                    opacity: 0;
+                    visibility: hidden;
+
+                    background-color: #FFA200;
+                    width: 144px;
+                    height: 42px;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: #fff;
+                    text-align: center;
+                    text-transform: uppercase;
+
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+
+                    transition: all ease-in-out 0.3s;
+                }
+
+                &:hover{
+                    & .shelf-image--fastBuy{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+            &-name{
+                max-width: 290px;
+                width: 100%;
+                
+                font-size: 14px;
+                font-weight: 400;
+                color: #7F7F7F;
+                white-space: nowrap;
+                text-align: center;
+                margin-bottom: 5px;
+                
+                text-overflow: ellipsis;
+                overflow: hidden;
+                
+                @media (max-width: 1191px){
+                    max-width: unset;
+                    padding: 0 5px;
+                }
+            }
+            &-prices{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                
+                &--listPrice{
+                    font-size: 12px;
+                    text-decoration: line-through;
+                    font-weight: 400;
+                    color: #7F7F7F;
+                    white-space: nowrap;
+                    text-align: center;
+                    margin-right: 7px;
+                }
+                &--bestPrice{
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #7F7F7F;
+                    white-space: nowrap;
+                    text-align: center;
+                    margin-bottom: 7px;
+                }
+                &--installmentsPrice{
+                    width: 100%;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #7F7F7F;
+                    white-space: nowrap;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
